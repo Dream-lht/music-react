@@ -1,0 +1,32 @@
+/*全局样式*/
+
+/*文字单行显示，超出部分隐藏*/
+.text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*固定宽度，并且居中对齐*/
+.wrap-v1{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.warp-v2{
+  width: 980px;
+  margin: 0 auto;
+}
+
+/*一些精灵图的样式*/
+.sprite_01{
+  background: url(@/assets/image/topbar.png) no-repeat 0 9999px;
+}
+
+.sprite_02{
+  background: url(@/assets/image/topbar.png) no-repeat 0 9999px;
+}
+
+.sprite_03{
+  background: url(@/assets/image/topbar.png) no-repeat 0 9999px;
+}

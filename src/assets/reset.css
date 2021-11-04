@@ -1,0 +1,9 @@
+/*对normalize.css进行模块化导入*/
+@import "~normalize.css";
+
+/*对标签样式初始化文件导入*/
+@import "base.css";
+@import "global.css";
+
+/*引入antd的全局样式*/
+@import "~antd/dist/antd.css";
