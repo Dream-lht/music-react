@@ -30,3 +30,13 @@
 .sprite_03{
   background: url(@/assets/image/topbar.png) no-repeat 0 9999px;
 }
+
+.foot_icon{
+  background:url(@/assets/image/foot_icon.png) no-repeat 0 9999px;
+  background-size: 110px 552px;
+}
+
+.foot_title{
+  background: url(@/assets/image/foot_title.png);
+  background-size: 180px 139px;
+}

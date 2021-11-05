@@ -3,9 +3,9 @@
 const headList = [
   {
     id:0,
-    exact:true,
+    exact:false,
     title:"发现音乐",
-    to:"/",
+    to:"/discover",
     type:"link",
     isHot:false,
   },

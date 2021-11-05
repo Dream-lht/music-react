@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import {renderRoutes} from 'react-router-config'
-
+import {Provider} from 'react-redux'
+import store from "./store";
 //导入一些配置文件
 import routers from "@/router/router";
 
@@ -12,13 +13,13 @@ import {BrowserRouter} from "react-router-dom";
 class App extends PureComponent {
   render() {
     return (
-        <div>
+        <Provider store={store}>
           <BrowserRouter>
             <AppHeader></AppHeader>
             {renderRoutes(routers)}
             <AppFooter></AppFooter>
           </BrowserRouter>
-        </div>
+        </Provider>
     );
   }
 }

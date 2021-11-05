@@ -20,9 +20,8 @@ export default memo(function AppFooter(props) {
           <>
             <NavLink to={item.to}
                      className="select_item"
-                     activeClassName="active_item"
-                     exact={item.exact}
-                      key={item.id}>
+                     activeClassName="active_item sprite_01"
+                     exact={item.exact}>
               {item.title}
             </NavLink>
             {
@@ -33,7 +32,7 @@ export default memo(function AppFooter(props) {
       )
     } else {
       return (
-          <a href={item.to} className="select_item" key={item.id}>{item.title}</a>
+          <a href={item.to} className="select_item">{item.title}</a>
       )
     }
   }
@@ -46,7 +45,7 @@ export default memo(function AppFooter(props) {
           <HeaderCenter>
             {
               headList.map((item) => {
-                return renderSelect(item);
+                return <span key={item.id}>{renderSelect(item)}</span>;
               })
             }
           </HeaderCenter>
@@ -58,6 +57,7 @@ export default memo(function AppFooter(props) {
             <div className="login">登录</div>
           </HeaderLeft>
         </div>
+        <div className="bottom_line"></div>
       </HeaderStyle>
   )
 })

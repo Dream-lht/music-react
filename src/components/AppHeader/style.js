@@ -7,7 +7,14 @@ export const HeaderStyle = styled.div`
   
   .content{
     display: flex;
+    height: 69px;
     justify-content: space-between;
+  }
+  .bottom_line{
+    background-color: #C20C0C;
+    height: 5px;
+    width: 100%;
+    margin-top: 1px;
   }
 `
 
@@ -49,8 +56,23 @@ export const HeaderCenter = styled.div`
     background-position: -192px 1px;
   }
   .active_item{
+    position: relative;
     color: #fff;
     background-color: #000;
+  }
+  .active_item::after{
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 10px;
+    height: 10px;
+
+    border-top:0px solid rgba(0,0,0,0);
+    border-right:7px solid  rgba(0,0,0,0);
+    border-bottom:8px solid #C20C0C;
+    border-left:7px solid  rgba(0,0,0,0);
   }
 `
 
