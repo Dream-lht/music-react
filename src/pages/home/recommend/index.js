@@ -1,34 +1,37 @@
 import react, {memo, useEffect} from "react";
-import {connect} from "react-redux";
-import {getTopBannerActions} from "./store/actionType";
+
+import {RecommendHeader,RecommendStyle} from "./style";
+
+import Banner from "./components/banner"
 
 function Recommend(props){
-  useEffect(() => {
-  //  在hooks当中执行
-    props.getBanner()
-    return () => {};
-  },[])
-  console.log(props.topBanner);
+  // useEffect(() => {
+  // //  在hooks当中执行
+  //   props.getBanner()
+  //   return () => {};
+  // },[])
   return(
-      <div>
-        Recommend
-      </div>
+      <RecommendStyle>
+        <RecommendHeader>
+          <Banner></Banner>
+        </RecommendHeader>
+      </RecommendStyle>
   )
 }
 //对props进行映射
-const mapStateToProps = state => {
-  return {
-    topBanner:state.recommend.topBanner,
-  }
-}
-const mapDispatchToProps = dispatch => {
-  return {
-    getBanner:() => {
-      //在这里进行action派发
-      dispatch(getTopBannerActions());
-    }
-  }
+// const mapStateToProps = state => {
+//   return {
+//     topBanner:state.recommend.topBanner,
+//   }
+// }
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     getBanner:() => {
+//       //在这里进行action派发
+//       dispatch(getTopBannerActions());
+//     }
+//   }
+//
+// }
 
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(memo(Recommend));
+export default memo(Recommend);
